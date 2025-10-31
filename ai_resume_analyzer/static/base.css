@@ -1,0 +1,147 @@
+/* Root Variables for Easy Theming */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+    --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --dark-bg: #0a0e27;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(71, 118, 230, 0.2);
+    --text-primary: #e6e9ef;
+    --text-secondary: rgba(230, 233, 239, 0.7);
+    --text-muted: rgba(230, 233, 239, 0.5);
+}
+
+/* Main Layout */
+.main {
+    padding: 0;
+    background: var(--dark-bg);
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(58, 123, 213, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 210, 255, 0.03) 0%, transparent 50%);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.block-container {
+    padding: 3rem 2rem !important;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Advanced Animations */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(71, 118, 230, 0.2),
+                    0 0 20px rgba(0, 210, 255, 0.1); 
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(71, 118, 230, 0.4),
+                    0 0 40px rgba(0, 210, 255, 0.2),
+                    0 0 60px rgba(58, 123, 213, 0.1); 
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.05); 
+        opacity: 0.9;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-gradient);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+/* Selection Styling */
+::selection {
+    background: rgba(0, 210, 255, 0.3);
+    color: white;
+}
+
+/* Hide Streamlit default menu and deploy button */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}

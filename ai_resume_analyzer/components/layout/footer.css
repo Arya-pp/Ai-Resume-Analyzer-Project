@@ -1,0 +1,12 @@
+.footer-container {
+    text-align: center; 
+    padding: 2.5rem 0 1.5rem 0; 
+    margin-top: 2rem; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container p {
+    color: rgba(230, 233, 239, 0.5); 
+    font-size: 0.85rem; 
+    margin:0;
+}
