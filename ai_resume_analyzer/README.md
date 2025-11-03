@@ -92,7 +92,7 @@ Then open your browser and go to 👉 **http://localhost:8501**
    - Overall resume score
    - ATS compatibility rating
    - Detailed strengths and weaknesses
-   - Professional improvement suggestions
+   - Professional improvement suggestiosns
    - Action verbs and skill recommendations
 
 ---
