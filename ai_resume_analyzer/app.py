@@ -14,7 +14,10 @@ from components.layout.footer import show_footer
 # 🔑 Load Environment Variables & Page Config
 # ==============================
 def setup_app():
-    load_dotenv()
+    # Load .env file from the current directory
+    from pathlib import Path
+    env_path = Path(__file__).parent / '.env'
+    load_dotenv(dotenv_path=env_path)
     api_key = os.getenv("GEMINI_API_KEY")
 
     st.set_page_config(
