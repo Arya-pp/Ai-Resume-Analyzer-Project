@@ -7,6 +7,7 @@
 **Easiest and fastest deployment method!**
 
 #### Steps:
+
 1. Go to [streamlit.io/cloud](https://streamlit.io/cloud)
 2. Sign in with your GitHub account
 3. Click "New app"
@@ -24,6 +25,7 @@
 Your app will be live at: `https://your-app-name.streamlit.app`
 
 **Benefits:**
+
 - ✅ Completely FREE
 - ✅ Auto-deploys on every git push
 - ✅ Built-in HTTPS
@@ -35,6 +37,7 @@ Your app will be live at: `https://your-app-name.streamlit.app`
 ### 2️⃣ Render (FREE Tier Available)
 
 #### Steps:
+
 1. Go to [render.com](https://render.com) and sign up
 2. Click "New +" → "Web Service"
 3. Connect your GitHub repo
@@ -52,9 +55,11 @@ Your app will be live at: `https://your-app-name.streamlit.app`
 ### 3️⃣ Heroku
 
 #### Prerequisites:
+
 - Install Heroku CLI: https://devcenter.heroku.com/articles/heroku-cli
 
 #### Steps:
+
 ```bash
 # Login to Heroku
 heroku login
@@ -90,6 +95,7 @@ Before deploying, make sure:
 **NEVER commit your API key to GitHub!**
 
 Always use environment variables:
+
 - Streamlit Cloud: Use "Secrets" in app settings
 - Render/Heroku: Use environment variable settings
 - Keep `.env` in `.gitignore`
@@ -99,15 +105,18 @@ Always use environment variables:
 ## 🐛 Troubleshooting
 
 ### App won't start:
+
 - Check logs in your deployment platform
 - Verify `GEMINI_API_KEY` is set correctly
 - Ensure `requirements.txt` has all dependencies
 
 ### Import errors:
+
 - Add missing packages to `requirements.txt`
 - Redeploy
 
 ### Slow performance:
+
 - Gemini API response time is ~10-15 seconds (normal)
 - Consider caching results for frequently analyzed resumes
 
@@ -116,6 +125,7 @@ Always use environment variables:
 ## 📊 Post-Deployment
 
 After deployment, test:
+
 1. Upload a sample resume
 2. Verify AI analysis works
 3. Check all UI components display correctly
