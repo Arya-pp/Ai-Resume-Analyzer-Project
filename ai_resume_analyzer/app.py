@@ -17,8 +17,16 @@ def setup_app():
     # Load .env file from the current directory
     from pathlib import Path
     env_path = Path(__file__).parent / '.env'
+    
+    # Debug: Check if .env file exists
+    if not env_path.exists():
+        st.error(f"⚠️ .env file not found at: {env_path}")
+    
     load_dotenv(dotenv_path=env_path)
     api_key = os.getenv("GEMINI_API_KEY")
+    
+    # Debug: Print if key is loaded (for testing only)
+    # st.write(f"Debug: API Key loaded: {api_key is not None}")
 
     st.set_page_config(
         page_title="AI Resume Analyzer",

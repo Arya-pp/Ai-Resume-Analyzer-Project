@@ -3,7 +3,7 @@ venv/
 .venv/
 
 # Environment variables
-.env.example
+.env
 
 # Python cache
 __pycache__/
@@ -11,3 +11,4 @@ __pycache__/
 
 # macOS
 .DS_Store
+
