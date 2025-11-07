@@ -1,8 +1,14 @@
 import streamlit as st
+import os
+from pathlib import Path
 
 def load_css(path):
     try:
-        with open(path) as f:
+        # Get the directory where the script is running from
+        base_dir = Path(__file__).parent.parent
+        css_path = base_dir / path
+        
+        with open(css_path) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning(f"⚠️ CSS file not found at {path}.")
